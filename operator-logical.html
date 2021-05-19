@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logical Operator</title>
+</head>
+<body>
+<script>
+    const val = 75
+    const absence = 75
+
+    let myValue = 80
+    let myAbsence = 45
+
+    let passValue = myValue > val
+    let passAbsence = myAbsence > absence
+
+    let result = passValue && passAbsence
+    document.writeln(result)
+
+    result = passValue || passAbsence
+    document.writeln(result)
+
+    document.writeln(!result)
+</script>
+
+</body>
+</html>
