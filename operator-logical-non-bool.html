@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logical Operator Non Boolean</title>
+</head>
+<body>
+<script>
+    console.info(0 || "Ed")
+    console.info(0 || null || "Dy")
+    console.info(0 || null) // null - last falsy
+
+    console.info("Ed" && 0) // 0
+    console.info("Ed" && 1) // 1 - last truthy
+</script>
+
+</body>
+</html>
