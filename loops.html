@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+</head>
+<body>
+<script>
+    // for
+    for (let i = 0; i < 10; i++) {
+        console.info(i)
+    }
+
+    // while
+    let counter = 1
+    while (counter <= 10) {
+        console.info(counter * 10)
+        counter++
+    }
+
+    // do while
+    let counter2 = 1
+    do {
+        console.info(counter2 * 100)
+        counter2++
+    }
+    while (counter2 <= 10)
+
+    // break and continue
+    for (let i = 0; i < 10; i++) {
+        if (i % 2 === 0) {
+            continue
+        }
+        console.info(i * 1000)
+        if (i === 7) {
+            break
+        }
+    }
+
+    // label
+    loopi:
+        for (let i = 0; i < 10; i++) {
+            loopj:
+                for (let j = 0; j < 10; j++) {
+                    if (j > 5) {
+                        continue loopi
+                    }
+                    console.info(i, j)
+                }
+        }
+
+    // For in - object and array
+    let person = {
+        firstName: "Eddy",
+        lastName: "Pastika",
+        age: 26
+    }
+
+    for (const personKey in person) {
+        console.info(`${personKey}: ${person[personKey]}`)
+    }
+
+    // For Of - array and string (iterable)
+    let names = ["Eddy", "Pastika", "Putra"]
+
+    for (const name of names) {
+        console.info(name)
+    }
+
+    let myName = "Eddy"
+    for (const myNameElement of myName) {
+       console.info(myNameElement)
+    }
+</script>
+
+</body>
+</html>
