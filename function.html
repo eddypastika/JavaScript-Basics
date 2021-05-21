@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    function sayHello() {
+        document.writeln("Hello, World!")
+        document.writeln("<br/>")
+    }
+
+    sayHello()
+    sayHello()
+
+    // func with param
+    function sayName(firstName, lastName) {
+        document.writeln(`Hello, ${firstName} ${lastName}`)
+        document.writeln("<br/>")
+    }
+
+    sayName("Eddy", "Pastika")
+
+    // func return value
+    function sayNameReturn(firstName, lastName = "") { // optional param
+        const name = `${firstName} ${lastName}`
+
+        return name
+    }
+
+    document.writeln(`Hello, ${sayNameReturn("Test")}`)
+    document.writeln("<br/>")
+</script>
+</body>
+</html>

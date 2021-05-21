@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>With Statement</title>
+</head>
+<body>
+<script>
+
+    let person = {
+        name: "Ed",
+        age: 26,
+    }
+
+    // without statement
+    console.log(person.name)
+    console.log(person.age)
+
+    // With statement - not recommend - ambiguous for name and age
+    with (person) {
+        console.log(name)
+        console.log(age)
+    }
+
+</script>
+
+</body>
+</html>
