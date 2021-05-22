@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructing</title>
+</head>
+<body>
+<script>
+    const arr = ["Eddy", "Pastika", "Putra", "I", "Gede"]
+    const [firstName, middleName, lastName, ...others] = arr
+
+    console.log(firstName)
+    console.log(middleName)
+    console.log(lastName)
+    console.log(others)
+
+    const address = {
+        firstName: "Test name",
+        state: "Indonesia",
+        province: "Bali",
+        city: "Badung",
+        detail: {
+            key: "Key",
+            value: "Value"
+        }
+    }
+
+    const {firstName: name, state, province, city, detail: {key, value}} = address
+    console.log(state)
+    console.log(province)
+    console.log(city)
+    console.log(name)
+    console.log(key)
+    console.log(value)
+
+    const addr = ({state, province, city}) => {
+        return `${state}-${province}-${city}`
+    }
+    console.log(addr(address))
+
+</script>
+</body>
+</html>

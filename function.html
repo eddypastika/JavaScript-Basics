@@ -23,7 +23,7 @@
     sayName("Eddy", "Pastika")
 
     // func return value
-    function sayNameReturn(firstName, lastName = "") { // optional param
+    function sayNameReturn(firstName, lastName = "") { // by default optional param
         const name = `${firstName} ${lastName}`
 
         return name
@@ -31,6 +31,72 @@
 
     document.writeln(`Hello, ${sayNameReturn("Test")}`)
     document.writeln("<br/>")
+
+    // func rest param
+    function sum(name, ...data) {
+        let total = 0
+        for (const datum of data) {
+            total += datum
+        }
+
+        console.info(`${name}: ${total}`)
+    }
+
+    let arr = [10, 10, 10, 10, 10]
+
+    sum("Nomer 1", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    sum("Nomer 2", ...arr)
+
+    // func as value
+    let newFunc = sum
+    newFunc("New Func", 1, 1, 1, 1, 1)
+
+    function testFunc(callback) {
+        callback("Eddy", "Pastika")
+    }
+
+    testFunc(sayName)
+
+    // anonymous func
+    let say = function (name) {
+        console.info(`My name is ${name}`)
+    }
+
+    say("Ed")
+    testFunc(function (name) {
+        console.log(name)
+    })
+
+    // func generator
+    function* setName(){
+        yield "Ed"
+        yield "test"
+    }
+
+    const names = setName()
+    for (const name of names) {
+        console.info(name)
+    }
+
+    // func arrow
+    const sayArrow = (name) => {
+        console.log("Arrrrrrroooowwww: ", name)
+    }
+
+    const sayArrow2 = (name) => console.log(name)
+
+    sayArrow("Ed")
+    sayArrow2("Ed")
+
+    // object method
+    let person = {
+        name: "Eddy",
+        sayHello: function (name) {
+            console.log(name, this.name)
+        }
+    }
+
+    person.sayHello("Test")
 </script>
 </body>
 </html>

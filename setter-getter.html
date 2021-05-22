@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setter and Getter</title>
+</head>
+<body>
+<script>
+    let person = {
+        firstName: "Eddy",
+        lastName: "Pastika",
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`
+        },
+        set fullName(val) {
+            let arr = val.split(" ")
+            this.firstName = arr[0]
+            this.lastName = arr[1]
+        }
+    }
+
+    person.fullName = "Regita Diandra"
+    console.info(person.fullName)
+</script>
+</body>
+</html>
